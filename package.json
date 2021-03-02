@@ -1,0 +1,25 @@
+{
+  "name": "filecoin-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run ganache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truffle-box/filecoin-box.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truffle-box/filecoin-box/issues"
+  },
+  "homepage": "https://github.com/truffle-box/filecoin-box#readme",
+  "dependencies": {
+    "@ganache/filecoin": "^0.1.1",
+    "ganache": "^3.0.0-filecoin.3"
+  }
+}
