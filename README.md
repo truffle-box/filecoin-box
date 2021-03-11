@@ -61,11 +61,13 @@ RPC Listening on 127.0.0.1:8545
 
 ### Optionally running the Filecoin Ganache GUI
 
-Coming soon.
+An alternative to running the Filecoin Ganache via the CLI, is to use the Filecoin Ganche UI version. 
 
 ## Creating Storage Deals for our Assets 
 
-To upload a file navigate to the "Market" tab and click "Choose File". TODO - include details on the concept of a deal...
+A [storage deals](https://docs.filecoin.io/store/lotus/store-data/#find-a-miner) is an agreement between a client and a storage miner to store some data in the network for a given duration. While in the case of the Filecoin mainnet, a deal must be secured with a miner, in Filecoin Ganache a deal is reached automatically.
+
+To simulate this, open the Filecoin Network Explorer, navigate to the "Market" tab and click "Choose File".
 
 Alternatively, you can send the following curl request directly to the Lotus RPC...
 
