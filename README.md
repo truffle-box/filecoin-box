@@ -115,7 +115,7 @@ truffle(development)> gallery.transferFrom(accounts[0], accounts[1], 1)
 
 ## Gallery UI
 
-A sample gallery interface is provided at the [here](https://truffle-box.github.io/filecoin-box/).
+A sample gallery interface is available [here](https://truffle-box.github.io/filecoin-box/).
 
 ![sample-ui](screenshots/sample-ui.png)
 
