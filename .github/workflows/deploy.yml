@@ -21,7 +21,7 @@ jobs:
       run: cd ui && npm run build
       env:
         CI: false
-        PUBLIC_URL: /www
+        PUBLIC_URL: /filecoin-box
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
