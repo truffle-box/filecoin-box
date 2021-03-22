@@ -1,5 +1,17 @@
 # Filecoin Box
 
+Welcome to the Filecoin box. The goal of this box is to both get you hands-on with all the official Filecoin support available within Truffle and Ganache, and to efficiently kick-start your journey of understanding Filecoin ecosystem and the benefits that robust decentralized storage can bring to your DApps.
+
+The context of the box is that of a decentralized art gallery. It comprises both Lotus and IPFS nodes (simulating the process of creating a storage deal), an Ethereum node (for the deployment of the [ERC-721](https://docs.openzeppelin.com/contracts/3.x/) based NFT contracts) and a [front-end](#gallery-ui) for viewing the gallery and the assets decentrally stored within.
+
+## Requirements
+
+The Filecoin box has the following requirements:
+
+- [Node.js](https://nodejs.org/) 12.x or later
+- [NPM](https://docs.npmjs.com/cli/) version 5.2 or later
+- Windows, Linux or MacOS
+
 ## Installation
 
 > Note that this installation command will only work once the box is published (in the interim you can use `truffle unbox https://github.com/truffle-box/filecoin-box`).
@@ -12,13 +24,13 @@ $ truffle unbox filecoin
 
 ### Running Filecoin Ganache
 
-Once installed, you can run Filecoin Ganache with the following command (note that this requires NPM version 5.2 or above)
+Once installed, you can run Filecoin Ganache with the following command:
 
 ```bash
 $ npx ganache filecoin
 ```
 
-This creates 10 accounts, each loaded with 100 FIL, and display both their account addresses and associated private keys.
+This creates 10 accounts, each loaded with 100 [FIL](https://docs.filecoin.io/reference/#wallets), and displays both their account addresses and associated private keys.
 
 ```bash
 Available Accounts
@@ -38,11 +50,11 @@ IPFS  RPC listening on 127.0.0.1:5001
 
 ### Optionally running the Filecoin Ganache GUI
 
-An alternative to running Filecoin Ganache via the CLI is to use the Filecoin Ganche UI version. As per the screenshot below, this exposes all the core Filecoin elements as tabs which is particularly useful if you're just starting out.
+An alternative to running Filecoin Ganache via the CLI is to use Filecoin Ganche UI. As per the screenshot below, this exposes all the core Filecoin protocol elements as tabs which is particularly useful if you're just starting out.
 
 ![filecoin-ganache-ui](screenshots/filecoin-ganache-ui.png)
 
-Filecoin Ganche UI can be installed via the following...
+Filecoin Ganche UI can be installed and run via the following...
 
 ```
 git clone https://github.com/trufflesuite/ganache
@@ -74,13 +86,33 @@ $ npx ganache ethereum
 RPC Listening on 127.0.0.1:8545
 ```
 
-## Creating Storage Deals for our Assets 
+## Creating Storage Deals
 
-A [storage deals](https://docs.filecoin.io/store/lotus/store-data/#find-a-miner) is an agreement between a client and a storage miner to store some data in the network for a given duration. While in the case of the Filecoin mainnet, a deal must be secured with a miner, in Filecoin Ganache a deal is reached automatically.
+A [storage deal](https://docs.filecoin.io/store/lotus/store-data/#find-a-miner) is an agreement between a client and a storage miner to store some data in the network for a given duration. Note that while in the case of Filecoin's mainnet, a deal must be secured with a miner before data is stored, in Filecoin Ganache a deal is reached automatically.
 
-To simulate this, open the Filecoin Network Explorer and navigate to the "Market" tab. From here you can select a file by clicking "Choose File" followed by "Upload to the Filecoin Network".
+There
 
-Alternatively, you can send the following curl request directly to the Lotus RPC. Note that the you'll need to update both the wallet address (`t3s3la3754...`) and CID (`QmZTR5bcpQ...`).
+### Via Filecoin Network Explorer
+
+The simplest way to store data, open the Filecoin Network Explorer and navigate to the "Market" tab. From here you can select a file by clicking "Choose File" followed by "Upload to the Filecoin Network".
+
+### Via Truffle Preserve
+
+[Truffle](https://www.trufflesuite.com/docs/truffle/overview) now has a `preserve` command which allows for the 'preservation' of files directly from the Truffle CLI. This is currently experimental and thus on specific branch; installation details available at [here](https://www.trufflesuite.com/blog/announcing-collaboration-with-filecoin).
+
+Once installed, you'll be able to preserve your files via the following...
+
+```
+// Preserve to Filecoin:
+$ truffle preserve ./path/to/directory --filecoin
+
+// Preserve to IPFS only:
+$ truffle preserve ./path/to/directory --ipfs 
+```
+
+### Via Curl (or equivalent)
+
+Lastly, you can send the following `curl` request directly to the Lotus RPC. Note that the you'll need to update both the wallet address (`t3s3la3754...`) and CID (`QmZTR5bcpQ...`).
 
 ```bash
 curl -X POST \
@@ -91,7 +123,7 @@ curl -X POST \
 
 ## Minting an NFT
 
-In the example below, we've already created a deal for the 3 assets (metadata, thumbnail, and the original asset repsectively) that comprise our NFT. These are as follows, with their corresponding CIDs.
+In the example below, we've already created a deal for the 3 assets (metadata, thumbnail, and the original asset respectively) that comprise our NFT. These are as follows, with their corresponding CIDs.
 
 - metadata ([QmS4t7rFPxaaNriXvCmALr5GYRAtya5urrDaZgkfHutdCG](https://ipfs.io/ipfs/QmS4t7rFPxaaNriXvCmALr5GYRAtya5urrDaZgkfHutdCG))
 - thumbnail - ([QmbAAMaGWpiSgmMWYTRtGsru382j6qTVQ4FDKX2cRTRso6](https://ipfs.io/ipfs/QmbAAMaGWpiSgmMWYTRtGsru382j6qTVQ4FDKX2cRTRso6))
@@ -110,6 +142,7 @@ In the above example the owner of the NFT is set (via `accounts[0]`) to that of 
 ### Transferring Ownership
 
 ```bash
+$ truffle console
 truffle(development)> gallery.transferFrom(accounts[0], accounts[1], 1)
 ```
 
