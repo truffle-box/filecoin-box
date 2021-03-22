@@ -2,9 +2,9 @@
 
 ![box-artwork](box-img-sm.png)
 
-Welcome to the Filecoin box. The goal of this box is to both get you hands-on with all the official Filecoin support available within Truffle and Ganache, and to efficiently kick-start your journey of understanding Filecoin ecosystem and the benefits that robust decentralized storage can bring to your DApps.
+Welcome to the Filecoin box. The goal of this box is to both get you hands-on with all the official Filecoin support available within Truffle and Ganache, and to kick-start your journey into the Filecoin ecosystem and the benefits that robust decentralized storage can bring to your DApps.
 
-The context of the box is that of a decentralized art gallery. It comprises both Lotus and IPFS nodes (simulating the process of creating a storage deal), an Ethereum node (for the deployment of the [ERC-721](https://docs.openzeppelin.com/contracts/3.x/) based NFT contracts) and a [front-end](#gallery-ui) for viewing the gallery and the assets decentrally stored within.
+The context of the box is that of a decentralized art gallery. It comprises both [Lotus](https://docs.filecoin.io/reference/lotus-api/) and IPFS nodes (simulating the process of creating a storage deal), an Ethereum node (for the deployment of the [ERC-721](https://docs.openzeppelin.com/contracts/3.x/) based NFT contracts) and a [front-end](#gallery-ui) for viewing the gallery and the assets decentrally stored within.
 
 ## Requirements
 
@@ -154,7 +154,6 @@ A sample gallery interface is available [here](https://truffle-box.github.io/fil
 
 ![sample-ui](screenshots/sample-ui.png)
 
-## Resources
+## Support
 
-- [@ganache/filecoin](https://www.npmjs.com/package/@ganache/filecoin)
-- [Demo](https://www.youtube.com/watch?v=mB1odTv6-3k&feature=youtu.be)
+Support for this box is available via the Truffle community available [here](https://www.trufflesuite.com/community).
