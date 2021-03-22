@@ -22,5 +22,8 @@
     "@ganache/filecoin": "^0.1.1",
     "@openzeppelin/contracts": "^3.4.0",
     "ganache": "^3.0.0-filecoin.3"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.2.3"
   }
 }
