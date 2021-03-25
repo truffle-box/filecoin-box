@@ -4,7 +4,7 @@
 
 Welcome to the Filecoin box. The goal of this box is to both get you hands-on with all the official Filecoin support available within Truffle and Ganache, and to kick-start your journey into the Filecoin ecosystem and the benefits that robust decentralized storage can bring to your DApps.
 
-The context of the box is that of a decentralized art gallery. It comprises both [Lotus](https://docs.filecoin.io/reference/lotus-api/) and IPFS nodes (simulating the process of creating a storage deal), an Ethereum node (for the deployment of the [ERC-721](https://docs.openzeppelin.com/contracts/3.x/) based NFT contracts) and a [front-end](#gallery-ui) for viewing the gallery and the assets decentrally stored within.
+The context of the box is that of a decentralized art gallery. It comprises both [Lotus](https://docs.filecoin.io/reference/lotus-api/) and [IPFS](https://ipfs.io/) nodes (simulating the process of creating a storage deal), an Ethereum node (for the deployment of the [ERC-721](https://docs.openzeppelin.com/contracts/3.x/) based NFT contracts) and a [front-end](#gallery-ui) for viewing the gallery and the assets decentrally stored within.
 
 ## Requirements
 
@@ -92,8 +92,6 @@ RPC Listening on 127.0.0.1:8545
 
 A [storage deal](https://docs.filecoin.io/store/lotus/store-data/#find-a-miner) is an agreement between a client and a storage miner to store some data in the network for a given duration. Note that while in the case of Filecoin's mainnet, a deal must be secured with a miner before data is stored, in Filecoin Ganache a deal is reached automatically.
 
-There
-
 ### Via Filecoin Network Explorer
 
 The simplest way to store data, open the Filecoin Network Explorer and navigate to the "Market" tab. From here you can select a file by clicking "Choose File" followed by "Upload to the Filecoin Network".
@@ -153,6 +151,14 @@ truffle(development)> gallery.transferFrom(accounts[0], accounts[1], 1)
 A sample gallery interface is available [here](https://truffle-box.github.io/filecoin-box/).
 
 ![sample-ui](screenshots/sample-ui.png)
+
+You can use the following steps to run this locally...
+
+```
+$ cd ui
+$ npm i
+$ npm run start
+```
 
 ## Support
 
