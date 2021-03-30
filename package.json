@@ -24,6 +24,7 @@
     "ganache": "^3.0.0-filecoin.3"
   },
   "devDependencies": {
-    "@truffle/hdwallet-provider": "^1.2.3"
+    "@truffle/hdwallet-provider": "^1.2.3",
+    "truffle": "^5.2.4-preserves.0"
   }
 }
