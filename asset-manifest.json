@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/filecoin-box/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/filecoin-box/static/js/main.38828002.chunk.js",
-    "main.js.map": "/filecoin-box/static/js/main.38828002.chunk.js.map",
+    "main.js": "/filecoin-box/static/js/main.f88e2981.chunk.js",
+    "main.js.map": "/filecoin-box/static/js/main.f88e2981.chunk.js.map",
     "runtime-main.js": "/filecoin-box/static/js/runtime-main.8b8af10a.js",
     "runtime-main.js.map": "/filecoin-box/static/js/runtime-main.8b8af10a.js.map",
     "static/css/2.3b5d696b.chunk.css": "/filecoin-box/static/css/2.3b5d696b.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.3b5d696b.chunk.css",
     "static/js/2.a0b6615a.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.38828002.chunk.js"
+    "static/js/main.f88e2981.chunk.js"
   ]
 }
