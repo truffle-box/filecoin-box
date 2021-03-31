@@ -18,11 +18,8 @@ import Footer from './Components/Footer';
 
 const ipfsGateway = `https://ipfs.io/ipfs`;
 
-// const provider = new ethers.providers.JsonRpcProvider(`http://localhost:9545`);
-const provider = new ethers.providers.InfuraProvider("rinkeby");
-
-// const myGallery = "0x340Abe0afeA54bDd3e4ad48BED039F4deF8eC545";
-const myGallery = "0x6cb457d583340099CadcBde4E05Eaa32488a6027";
+const provider = new ethers.providers.JsonRpcProvider(`http://localhost:8545`);
+const myGallery = "0x8408acB27E7068c29485BC471C681cb30E62aA73";
 
 const galleryAbi = [
   "function totalSupply() view returns (uint)",

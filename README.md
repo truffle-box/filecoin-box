@@ -1,6 +1,6 @@
 # Filecoin Box
 
-![box-artwork](box-img-sm.png)
+![box-artwork](https://github.com/truffle-box/filecoin-box/blob/master/box-img-sm.png?raw=true)
 
 Welcome to the Filecoin box. The goal of this box is to both get you hands-on with all the official Filecoin support available within Truffle and Ganache, and to kick-start your journey into the Filecoin ecosystem and the benefits that robust decentralized storage can bring to your DApps.
 
@@ -54,7 +54,7 @@ IPFS  RPC listening on 127.0.0.1:5001
 
 An alternative to running Filecoin Ganache via the CLI is to use Filecoin Ganche UI. As per the screenshot below, this exposes all the core Filecoin protocol elements as tabs which is particularly useful if you're just starting out.
 
-![filecoin-ganache-ui](screenshots/filecoin-ganache-ui.png)
+![filecoin-ganache-ui](https://github.com/truffle-box/filecoin-box/blob/master/screenshots/filecoin-ganache-ui.png?raw=true)
 
 Filecoin Ganche UI can be installed and run via the following...
 
@@ -148,7 +148,7 @@ truffle(development)> gallery.transferFrom(accounts[0], accounts[1], 1)
 
 A sample gallery interface is available [here](https://truffle-box.github.io/filecoin-box/).
 
-![sample-ui](screenshots/sample-ui.png)
+![sample-ui](https://github.com/truffle-box/filecoin-box/blob/master/screenshots/sample-ui.png?raw=true)
 
 You can use the following steps to run this locally...
 
