@@ -18,6 +18,7 @@ The Filecoin box has the following requirements:
 
 ```bash
 $ truffle unbox filecoin
+$ npm install
 ```
 
 ## Setup
