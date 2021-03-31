@@ -59,10 +59,10 @@ An alternative to running Filecoin Ganache via the CLI is to use Filecoin Ganche
 Filecoin Ganche UI can be installed and run via the following...
 
 ```
-git clone https://github.com/trufflesuite/ganache
-git checkout feat/filecoin-files
-yarn
-yarn start
+$ git clone https://github.com/trufflesuite/ganache
+$ git checkout feat/filecoin-files
+$ npm install
+$ npm run start
 ```
 
 ### Running the Filecoin Network Explorer
@@ -71,9 +71,9 @@ yarn start
 
 ```bash
 $ git clone https://github.com/trufflesuite/filecoin-network-inspector
-$ yarn
+$ npm install
 $ git checkout ganache-changes
-$ yarn start
+$ npm run start
 ```
 
 Assuming it's running correctly, you can open the Filecoin Network Explorer at the following: http://localhost:3000
@@ -92,7 +92,7 @@ RPC Listening on 127.0.0.1:8545
 
 A [storage deal](https://docs.filecoin.io/store/lotus/store-data/#find-a-miner) is an agreement between a client and a storage miner to store some data in the network for a given duration. Note that while in the case of Filecoin's mainnet, a deal must be secured with a miner before data is stored, in Filecoin Ganache a deal is reached automatically.
 
-### Via Filecoin Network Explorer
+### Via the Filecoin Network Explorer
 
 The simplest way to store data, open the Filecoin Network Explorer and navigate to the "Market" tab. From here you can select a file by clicking "Choose File" followed by "Upload to the Filecoin Network".
 
@@ -100,15 +100,13 @@ The simplest way to store data, open the Filecoin Network Explorer and navigate 
 
 [Truffle](https://www.trufflesuite.com/docs/truffle/overview) now has a `preserve` command which allows for the 'preservation' of files directly from the Truffle CLI. This is currently experimental and thus on specific branch; installation details available at [here](https://www.trufflesuite.com/blog/announcing-collaboration-with-filecoin).
 
-Once installed, you'll be able to preserve your files via the following...
+Once installed, you'll be able to preserve your assets via the following command. Note that you'll need to include the `environments` object in your `truffle-config.js` to point at the respective node (although these are already preconfigured in the box).
 
 ```
-// Preserve to Filecoin:
-$ truffle preserve ./path/to/directory --filecoin
-
-// Preserve to IPFS only:
-$ truffle preserve ./path/to/directory --ipfs 
+$ truffle preserve --environment development ./assets/ --filecoin
 ```
+
+For broader help with this command run `truffle help preserve`.
 
 ### Via Curl (or equivalent)
 
@@ -156,10 +154,10 @@ You can use the following steps to run this locally...
 
 ```
 $ cd ui
-$ npm i
+$ npm install
 $ npm run start
 ```
 
 ## Support
 
-Support for this box is available via the Truffle community available [here](https://www.trufflesuite.com/community).
+Support for this box is available via the Truffle community available [here](https://www.trufflesuite.com/community). In addition, Filecoin support is available [here](https://filecoin.io/).
