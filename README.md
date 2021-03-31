@@ -16,8 +16,6 @@ The Filecoin box has the following requirements:
 
 ## Installation
 
-> Note that this installation command will only work once the box is published (in the interim you can use `truffle unbox https://github.com/truffle-box/filecoin-box`).
-
 ```bash
 $ truffle unbox filecoin
 ```
