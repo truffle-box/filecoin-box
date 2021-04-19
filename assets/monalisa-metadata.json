@@ -1,7 +1,7 @@
 {
   "title": "Mona Lisa",
-  "thumbnail": "QmbAAMaGWpiSgmMWYTRtGsru382j6qTVQ4FDKX2cRTRso6",
-  "media": "QmUWFZQrJHfCVNHXVjjb2zeowVvH7dC6rKpbdHsTdnAgvP",
+  "thumbnail": "ipfs://QmbAAMaGWpiSgmMWYTRtGsru382j6qTVQ4FDKX2cRTRso6",
+  "media": "ipfs://QmUWFZQrJHfCVNHXVjjb2zeowVvH7dC6rKpbdHsTdnAgvP",
   "vintage": "1503-01-01 00:00:00Z",
   "author": "Leonard da Vinci"
  }

@@ -33,5 +33,8 @@ module.exports = {
     solc: {
       version: "0.6.2",
     }
-  }
+  },
+  plugins: [
+	"truffle-plugin-debugger"
+  ]
 }

@@ -18,7 +18,7 @@ const Navigation = () => {
       <Navbar.Brand>
         <Navbar.Item renderAs="span">
           <Link to="/">
-            <img src="logo.png" alt="Filecoin Gallery" width="112" height="28" />
+            <img src="/filecoin-box/logo.png" alt="Filecoin Gallery" width="112" height="28" />
           </Link>
         </Navbar.Item>
         <Navbar.Burger />
