@@ -55,14 +55,7 @@ An alternative to running Filecoin Ganache via the CLI is to use Filecoin Ganche
 
 ![filecoin-ganache-ui](https://github.com/truffle-box/filecoin-box/blob/master/screenshots/filecoin-ganache-ui.png?raw=true)
 
-Filecoin Ganche UI can be installed and run via the following...
-
-```
-$ git clone https://github.com/trufflesuite/ganache
-$ git checkout feat/filecoin-files
-$ npm install
-$ npm run start
-```
+Filecoin Ganche UI can be downloaded [here](https://github.com/trufflesuite/ganache/releases/tag/v2.6.0-beta.3). 
 
 ### Running the Filecoin Network Explorer
 
