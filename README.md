@@ -36,6 +36,7 @@ The Filecoin Network Explorer can help view data about the Chain, Miners, Market
 
 ```bash
 $ git clone https://github.com/trufflesuite/filecoin-network-inspector
+$ cd filecoin-network-inspector
 $ git checkout ganache-changes
 $ npm install
 ```
