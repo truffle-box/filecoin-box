@@ -55,9 +55,9 @@ $ npm install
 Now that all of the necessary components are installed, this box will allow you to:
  - [Run Lotus and IPFS nodes](#lotusipfs-node-setup) to store images for your gallery,
  - [Run the Filecoin Network Explorer](#running-the-filecoin-network-explorer),
- - [Deploy an NFT Minting contract](),
- - [Interact with the Lotus/IPFS nodes and deployed contract](), and
- - [View all images uploaded to the gallery contract]()
+ - [Deploy an NFT Minting contract](#deploying-the-nft-minting-contract),
+ - Interact with the [Lotus/IPFS nodes](#creating-storage-deals) and [deployed contract](#minting-an-nft), and
+ - [View all images uploaded to the gallery contract](#gallery-ui)
 
 
 ### Lotus/IPFS Node Setup
