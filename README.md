@@ -26,8 +26,8 @@ Installation takes place in three parts:
 In a terminal window, start off by installing this box.
 
 ```bash
-$ truffle unbox filecoin
-$ npm install
+truffle unbox filecoin
+npm install
 ```
 
 #### Installing the Filecoin Network Explorer
@@ -35,10 +35,10 @@ $ npm install
 The Filecoin Network Explorer can help view data about the Chain, Miners, Markets, and Deals being made on the Lotus and IPFS nodes. The explorer can be installed by opening a new terminal window and running the following.
 
 ```bash
-$ git clone https://github.com/trufflesuite/filecoin-network-inspector
-$ cd filecoin-network-inspector
-$ git checkout ganache-changes
-$ npm install
+git clone https://github.com/trufflesuite/filecoin-network-inspector
+cd filecoin-network-inspector
+git checkout ganache-changes
+npm install
 ```
 > Note that these steps could potentially change as branches are merged into master/main or other updates take place.
 
@@ -47,8 +47,8 @@ $ npm install
 Open a new terminal window and navigate to the directory where the Filecoin Box was installed in the [first step](#installing-the-filecoin-box). From there, run:
 
 ```bash
-$ cd ui
-$ npm install
+cd ui
+npm install
 ```
 
 ## Box Overview
@@ -70,7 +70,7 @@ The Lotus and IPFS nodes can be run using either [Ganache-CLI](#running-filecoin
 In a terminal window, navigate to the directory where the Filecoin box is installed. Run the following command.
 
 ```bash
-$ npx ganache filecoin
+npx ganache filecoin
 ```
 
 This creates 10 accounts, each loaded with 100 [FIL](https://docs.filecoin.io/reference/#wallets), and displays both their account addresses and associated private keys.
@@ -104,7 +104,7 @@ Filecoin Ganche UI can be downloaded [here](https://github.com/trufflesuite/gana
 The Filecoin Network Explorer can help view data about the Chain, Miners, Markets, and Deals being made on the Lotus and IPFS nodes. It can also be used to facilitate [creating storage deals](#creating-storage-deals). To run, navigate to its installed location in a terminal window and run:
 
 ```bash
-$ npm run start
+npm run start
 ```
 
 The Filecoin Network Explorer can now be viewed at http://localhost:3000
@@ -113,7 +113,7 @@ The Filecoin Network Explorer can now be viewed at http://localhost:3000
 Deploying the contract will first require an Ethereum node to connect to. A local Ethereum node can be run using Ganache. This will supply the needed wallet and addresses for deploying the contract and owning the NFTs. To run a Ganache node, open a terminal window and run:
 
 ```bash
-$ npx ganache ethereum
+npx ganache ethereum
 ```
 The following output should be displayed at the end of the log:
 ```bash
@@ -122,11 +122,11 @@ RPC Listening on 127.0.0.1:8545
 
 To deploy the contract to the local node, the contract needs to be compiled and migrated. Open a terminal window at the Filecoin box and run:
 ```bash
-$ truffle compile
+truffle compile
 ```
 followed by
 ```bash
-$ truffle migrate
+truffle migrate
 ```
 Note the address of the deployed contract, as it will be used in setting up the [gallery UI](#gallery-ui).
 ### Creating Storage Deals
@@ -144,7 +144,7 @@ The simplest way to store data, open the Filecoin Network Explorer and navigate 
 Once installed, you'll be able to preserve your assets via the following command. Note that you'll need to include the `environments` object in your `truffle-config.js` to point at the respective node (although these are already preconfigured in the box).
 
 ```
-$ truffle preserve --environment development ./assets/ --filecoin
+truffle preserve --environment development ./assets/ --filecoin
 ```
 
 For broader help with this command run `truffle help preserve`.
@@ -183,7 +183,7 @@ Assuming the local Ethereum Ganache node is running, you'll be able to open a co
 From there, the metadata can be minted with:
 
 ```bash
-$ truffle console
+truffle console
 truffle(development)> const gallery = await MyGallery.deployed()
 truffle(development)> gallery.mint(accounts[0], "<CID of Metadata>")
 ```
@@ -194,7 +194,7 @@ In the above example the owner of the NFT is set (via `accounts[0]`) to that of 
 
 If we want to transfer it to a new owner, we'll be able to do so with the following.
 ```bash
-$ truffle console
+truffle console
 truffle(development)> gallery.transferFrom(accounts[0], accounts[1], 1)
 ```
 
@@ -207,7 +207,7 @@ A sample gallery interface is available [here](https://truffle-box.github.io/fil
 To run this locally, open a terminal window at the location that the [front-end gallery was installed](#installing-the-front-end-gallery) and run:
 
 ```
-$ npm run start
+npm run start
 ```
 
 Note that this does not display the images uploaded to your local node. Out of the box, the UI pulls from a contract deployed to the Rinkeby testnet. To point to your own contract, navigate to `filecoin-box/ui/src/App.js`. Find the following section and follow the instructions in the comments:
