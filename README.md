@@ -151,7 +151,7 @@ For broader help with this command run `truffle help preserve`.
 
 #### Via Curl (or equivalent)
 
-Lastly, you can send the following `curl` request directly to the Lotus RPC. Note that the you'll need to update both the wallet address (`t3s3la3754...`) and CID (`QmZTR5bcpQ...`).
+Lastly, you can send the following `curl` request directly to the Lotus RPC. Note that the you'll need to update both the wallet address (`t3s3la3754...`) and Content Identifier (aka CID) (`QmZTR5bcpQ...`).
 
 ```bash
 curl -X POST \
@@ -162,7 +162,7 @@ curl -X POST \
 
 ### Minting an NFT
 
-In the example below, we've already created a deal for the 3 assets (metadata, thumbnail, and the original asset respectively) that comprise our NFT. These are as follows, with their corresponding Content Identifiers (aka CIDs).
+In the example below, we've already created a deal for the 3 assets (metadata, thumbnail, and the original asset respectively) that comprise our NFT. These are as follows, with their corresponding CIDs.
 
 - metadata ([QmS4t7rFPxaaNriXvCmALr5GYRAtya5urrDaZgkfHutdCG](https://ipfs.io/ipfs/QmS4t7rFPxaaNriXvCmALr5GYRAtya5urrDaZgkfHutdCG))
 - thumbnail - ([QmbAAMaGWpiSgmMWYTRtGsru382j6qTVQ4FDKX2cRTRso6](https://ipfs.io/ipfs/QmbAAMaGWpiSgmMWYTRtGsru382j6qTVQ4FDKX2cRTRso6))
